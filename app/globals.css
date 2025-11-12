@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body {
+  @apply bg-indigo-950 text-slate-100 min-h-full scroll-smooth;
+}
+
+body {
+  @apply bg-gradient-to-b from-indigo-950 via-slate-950 to-slate-900;
+}
+
+main {
+  @apply relative overflow-hidden;
+}
+
+.glass-card {
+  @apply bg-slate-900/60 backdrop-blur-lg border border-white/10 rounded-3xl shadow-glow;
+}
+
+.gradient-border {
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0));
+  padding: 1px;
+  border-radius: 1.5rem;
+}
+
+.grid-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 0),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08) 1px, transparent 0);
+  background-size: 3.5rem 3.5rem;
+  opacity: 0.2;
+  pointer-events: none;
+}
